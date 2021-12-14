@@ -1,0 +1,19 @@
+﻿@model List<EF_Demo.Models.Product>
+
+@{
+    ViewBag.Title = "SearchProducts";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>SearchProduct</h2>
+
+
+    <form class="form-inline" action="/Product/SearchProducts" method="post">
+        <label for="Search" class="m-1">Search Product:</label>
+        <input type="Search" placeholder="Search" class="form-control m-1" name="NameOfBrand"/>
+        <button type="submit" class="btn-outline-dark"> Go</button>
+
+    </form>
+
+
+

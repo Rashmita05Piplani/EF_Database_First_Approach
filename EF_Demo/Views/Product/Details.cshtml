@@ -1,0 +1,27 @@
+﻿@model EF_Demo.Models.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+<table class="table-bordered">
+    <tr>
+        <th> ProductId</th>
+        <td>@Model.ProductId</td>
+    </tr>
+    <tr>
+        <th> ProductName</th>
+        <td>@Model.ProductName</td>
+    </tr><tr>
+        <th> Price</th>
+        <td>@Model.Price</td>
+    </tr><tr>
+        <th> DateOfPurchase</th>
+        <td>@Model.DateOfPurchase</td>
+    </tr><tr>
+        <th> Availability</th>
+        <td>@Model.AvailabiltyStatus</td>
+    </tr>
+</table>
+<a href="/Product/Index">Back to Products</a>

@@ -1,0 +1,45 @@
+﻿@model List<EF_Demo.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Products</h2>
+<a href="/Product/Create"> Create New</a>
+<table class="table">
+  <tr>
+      <th> ProductId</th>
+      <th> ProductName</th>
+      <th> Price</th>
+      <th> Date of Purchase</th>
+      <th> Availabilty Status</th>
+      <th> Category Id</th>
+      <th> Brand Id</th>
+      <th> Active </th>
+   </tr>
+@foreach (var item in Model)
+{
+<tr>
+    <td> @item.ProductId</td>
+    <td> @item.ProductName</td>
+    <td> @item.Price</td>
+    <td> @item.DateOfPurchase</td>
+    <td> @item.AvailabiltyStatus</td>
+    @if(item.CategoryId !=null)
+    {
+    <td> @item.Category.CategoryIdName</td>
+    }
+    @if (item.BrandID != null)
+    {
+    <td> @item.Brand.BrandName</td>
+    }
+    <td> @item.Active</td>
+    <td> <a href="/product/details/@item.ProductId">Details</a></td>
+    <td> <a href="/product/edit/@item.ProductId">Edit</a></td>
+    <td> <a href="/product/delete/@item.ProductId">Delete</a></td>
+
+</tr>
+}
+
+</table>
+

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Create Product</h2>
+<form action="/Product/Create" method="post" enctype="multipart/form-data"> 
+   
+
+    <div class="'form-group col-md-6">
+        <label for="ProductNmae">Product Name</label>
+        <input type="text" class="form-control" name="ProductName" placeholder="ProductName" />
+    </div>
+    <div class="'form-group col-md-6">
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" name="Price" placeholder="Price" />
+    </div>
+    <div class="'form-group col-md-6">
+        <label for="DateOfPurchase">DateOfPurchase</label>
+        <input type="text" class="form-control" name="Price" placeholder="DateOfPurchase" />
+    </div>
+    <div class="'form-group col-md-6">
+        <label for="Availabilty Status">Availabilty Status</label>
+        <select class="form-control" name="AvailabiltyStatus" placeholder="Availability" >
+        <option value=""> Please select</option>
+        <option value=" InStock"> Instock</option>
+        <option value ="OutOfStock"> OutStock</option>
+        </select>
+
+
+
+
+
+    </div>
+     
+       <div class="form-group col-md-6">
+        <label for="">CategoryId</label>
+        <input type="text" class="form-control" name="CategoryId" placeholder="CategoryId" />
+        </div>
+     
+       <div class="'form-group col-md-6">
+        <label for="BrandId">BrandId</label>
+        <input type="text" class="form-control" name="BrandId" placeholder="BrandId" />
+       </div>
+      
+    <div class="form-group">
+        <label for="Image">Image</label>
+        <input type="file" class="form-control-file" name="Photo" />ss
+    </div>
+
+    <button type="submit" class=" btn-btn-success">Create</button> 
+    <a class="btn-btn-danger" href="/product/index">Cancel</a>
+    
+</form>
+
